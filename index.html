@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RatelEffect — Fearless NFT Collection | 4,999 Unique Digital Ratels</title>
+  <meta name="description" content="RatelEffect is a collection of 4,999 fearless honey badger NFTs. Born from raw power and digital chaos, each Ratel carries the unstoppable spirit of nature's most fearless creature.">
+  <meta property="og:title" content="RatelEffect — Fearless NFT Collection">
+  <meta property="og:description" content="4,999 Unique Ratels. Unstoppable. Fearless. Relentless.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rateleffect.art">
+  <link rel="canonical" href="https://rateleffect.art">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/38.png">
+</head>
+<body>
+
+  <!-- Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="logo-ratel">Ratel</span><span class="logo-effect">Effect</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#mint">Mint</a></li>
+        <li><a href="#traits">Details</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li>
+          <a href="https://opensea.io" target="_blank" rel="noopener" class="nav-opensea">
+            <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M90 45C90 69.8528 69.8528 90 45 90C20.1472 90 0 69.8528 0 45C0 20.1472 20.1472 0 45 0C69.8528 0 90 20.1472 90 45Z" fill="currentColor" fill-opacity="0.1"/>
+              <path d="M22.2011 46.512L22.3953 46.2069L34.1016 27.8939C34.2726 27.6257 34.6749 27.6535 34.8043 27.9447C36.76 32.3277 38.4475 37.7786 37.6569 41.1721C37.3194 42.5849 36.3948 44.4393 35.348 46.2069C35.2035 46.4751 35.0452 46.7341 34.8769 46.9838C34.8 47.0977 34.6749 47.1625 34.5406 47.1625H22.5765C22.2657 47.1625 22.0854 46.8205 22.2011 46.512Z" fill="currentColor"/>
+              <path d="M74.38 49.9149V52.8137C74.38 52.9832 74.2784 53.1342 74.1304 53.1987C73.2242 53.5878 70.1219 55.0024 68.832 56.799C65.5402 61.3807 63.0251 67.932 57.4031 67.932H33.949C25.6362 67.932 18.9 61.1727 18.9 52.8322V52.5641C18.9 52.3394 19.0823 52.1571 19.307 52.1571H32.377C32.6378 52.1571 32.8385 52.3949 32.8108 52.6464C32.7 53.6862 32.9053 54.7446 33.4162 55.7015C34.4094 57.6153 36.427 58.8005 38.6 58.8005H44.801V52.664H38.663C38.3475 52.664 38.1626 52.2989 38.3475 52.0446C38.4214 51.9308 38.5045 51.817 38.5876 51.6847C39.3875 50.5457 40.5336 48.7728 41.6706 46.7341C42.4612 45.3028 43.2333 43.7631 43.8535 42.2141C43.982 41.8987 44.0836 41.574 44.1852 41.2585C44.3501 40.7013 44.524 40.1718 44.6441 39.6423C44.7457 39.2176 44.8288 38.7744 44.9119 38.3498C45.1583 37.0722 45.2692 35.7207 45.2692 34.3231C45.2692 33.7983 45.2415 33.2458 45.186 32.7209C45.1583 32.1499 45.0845 31.5835 45.0107 31.0125C44.9649 30.5555 44.8727 30.1031 44.7803 29.6368C44.6441 28.8739 44.4608 28.111 44.2405 27.3666L44.1667 27.0973C44.0005 26.4986 43.8535 25.9322 43.6609 25.3381C43.0684 23.4612 42.4058 21.6375 41.6706 19.9424C41.3921 19.3299 41.0858 18.7266 40.7796 18.1326C40.3365 17.2789 39.8842 16.5021 39.4596 15.7714C39.2578 15.4098 39.0745 15.0759 38.8913 14.742C38.6802 14.3543 38.4599 13.9759 38.2396 13.6143C38.0917 13.3554 37.926 13.1149 37.7874 12.8746L36.9323 11.4955C36.8215 11.3078 37.0048 11.0766 37.2158 11.1414L44.7457 13.3277H44.7642C44.7734 13.3277 44.7781 13.3323 44.7827 13.3323L45.7574 13.6328L46.8391 13.9667L47.1769 14.0684V10.6486C47.1769 8.90459 48.5738 7.5 50.3039 7.5C51.169 7.5 51.9504 7.85607 52.5151 8.43056C53.0798 9.00505 53.4312 9.79756 53.4312 10.6486V15.5773L54.2218 15.8086C54.2773 15.8271 54.3328 15.8503 54.3836 15.8874C54.5576 16.0121 54.8085 16.2016 55.1371 16.4421C55.3943 16.6371 55.6746 16.8774 56.0032 17.1316C56.6557 17.6517 57.4186 18.2781 58.2508 19.0042C58.4664 19.1843 58.6774 19.3737 58.8699 19.5631C59.9424 20.5399 61.1608 21.7159 62.3508 23.0735C62.6701 23.4427 62.9848 23.8166 63.3041 24.209C63.6236 24.606 63.9613 25.003 64.2623 25.4046C64.6648 25.9522 65.0858 26.5185 65.4606 27.1126C65.6347 27.3851 65.8273 27.6669 66.0013 27.9487C66.5012 28.7578 66.937 29.5854 67.3488 30.4131C67.5136 30.7508 67.6706 31.1147 67.8093 31.474C68.1655 32.3649 68.4479 33.274 68.6358 34.1831C68.6959 34.3993 68.7328 34.6341 68.7513 34.8504V34.9151C68.8159 35.2527 68.8436 35.6124 68.8621 35.9814C68.9452 37.1944 68.8621 38.4074 68.5983 39.6204C68.4664 40.2606 68.2923 40.8824 68.0766 41.5226C67.8609 42.1304 67.6337 42.7567 67.3626 43.3462C66.8349 44.5638 66.2239 45.7445 65.5076 46.834C65.2845 47.2033 65.0351 47.5864 64.7858 47.9557C64.5226 48.3434 64.2502 48.7173 63.9962 49.0681C63.6698 49.5051 63.325 49.9558 62.971 50.3805C62.6516 50.7544 62.3183 51.1283 61.971 51.4837C61.4895 52.0131 61.0218 52.5148 60.5403 52.989C60.2948 53.2524 60.031 53.5251 59.7625 53.7793C59.503 54.0519 59.2345 54.2921 58.9845 54.5233C58.6006 54.8887 58.2693 55.1844 57.9914 55.4201L57.3527 55.9773C57.2557 56.0603 57.131 56.1064 57.0017 56.1064H53.4312V62.2428H57.9591C59.2253 62.2428 60.4252 61.7964 61.3954 60.9638C61.7149 60.6908 63.3134 59.3193 65.1944 57.3278C65.2591 57.2587 65.3422 57.2079 65.4345 57.184L73.8688 54.6694C74.1488 54.5879 74.38 54.7585 74.38 55.0546V49.9149Z" fill="currentColor"/>
+            </svg>
+            OpenSea
+          </a>
+        </li>
+      </ul>
+      <div class="nav-hamburger" id="navHamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Mint Coming Soon
+        </div>
+        <h1 class="hero-title">
+          <span class="line1">Unleash The</span>
+          <span class="line2">RatelEffect</span>
+        </h1>
+        <p class="hero-subtitle">4,999 Fearless Ratels. Unstoppable. Relentless. Unyielding.</p>
+        <p class="hero-description">
+          Born from the spirit of nature's most fearless creature — the honey badger. 
+          Each Ratel is a digital warrior forged through layers of raw visual effects, 
+          carrying the relentless power that no force can tame.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">4,999</div>
+            <div class="hero-stat-label">Total Supply</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">150+</div>
+            <div class="hero-stat-label">Unique Effects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">4</div>
+            <div class="hero-stat-label">Mint Phases</div>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#mint" class="btn-primary">Explore Mint</a>
+          <a href="#collection" class="btn-secondary">View Collection</a>
+        </div>
+      </div>
+      <div class="hero-showcase">
+        <div class="hero-showcase-grid">
+          <div class="nft-preview"><img src="images/442.png" alt="RatelEffect #442" loading="eager"></div>
+          <div class="nft-preview"><img src="images/38.png" alt="RatelEffect #38" loading="eager"></div>
+          <div class="nft-preview"><img src="images/386.png" alt="RatelEffect #386" loading="eager"></div>
+          <div class="nft-preview"><img src="images/708.png" alt="RatelEffect #708" loading="eager"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="dot"></span>RatelEffect</div>
+      <div class="ticker-item"><span class="dot"></span>4,999 Supply</div>
+      <div class="ticker-item"><span class="dot"></span>Fearless</div>
+      <div class="ticker-item"><span class="dot"></span>Unstoppable</div>
+      <div class="ticker-item"><span class="dot"></span>Digital Warriors</div>
+      <div class="ticker-item"><span class="dot"></span>Honey Badger Army</div>
+      <div class="ticker-item"><span class="dot"></span>No Fear</div>
+      <div class="ticker-item"><span class="dot"></span>Pure Power</div>
+      <div class="ticker-item"><span class="dot"></span>RatelEffect</div>
+      <div class="ticker-item"><span class="dot"></span>4,999 Supply</div>
+      <div class="ticker-item"><span class="dot"></span>Fearless</div>
+      <div class="ticker-item"><span class="dot"></span>Unstoppable</div>
+      <div class="ticker-item"><span class="dot"></span>Digital Warriors</div>
+      <div class="ticker-item"><span class="dot"></span>Honey Badger Army</div>
+      <div class="ticker-item"><span class="dot"></span>No Fear</div>
+      <div class="ticker-item"><span class="dot"></span>Pure Power</div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image-main">
+            <img src="images/218.png" alt="RatelEffect NFT" loading="lazy">
+          </div>
+          <div class="about-image-float">
+            <img src="images/1327.png" alt="RatelEffect NFT" loading="lazy">
+          </div>
+          <div class="about-image-float">
+            <img src="images/391.png" alt="RatelEffect NFT" loading="lazy">
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <div class="about-tag">The Legend</div>
+          <h2 class="about-title">
+            Why The <span>Ratel?</span>
+          </h2>
+          <p class="about-text">
+            The <strong>honey badger (Ratel)</strong> is universally recognized as nature's most fearless animal. 
+            It attacks lions, raids beehives, devours venomous snakes, and walks away from encounters 
+            that would destroy any other creature. It doesn't care about the odds — it fights everything and fears nothing.
+          </p>
+          <p class="about-text">
+            <strong>RatelEffect</strong> channels that raw, untameable energy into the digital realm. 
+            Each of the 4,999 NFTs features a unique Ratel character transformed through multiple layers 
+            of striking visual effects — from glitch distortions to neon pulses, pixel decimation to 
+            chromatic chaos. Just like the real honey badger, every piece is bold, fearless, and absolutely unique.
+          </p>
+          <p class="about-text">
+            This isn't just a collection. This is a <strong>movement</strong>. Holding a RatelEffect means you embody 
+            the spirit of relentless courage — the kind that never backs down, never gives up, and never 
+            asks for permission.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="about-feature-icon">⚡</span>
+              <span class="about-feature-text">Fearless Spirit</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🎨</span>
+              <span class="about-feature-text">Unique Effects</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🛡️</span>
+              <span class="about-feature-text">Unstoppable Force</span>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">💎</span>
+              <span class="about-feature-text">4,999 Ratels</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTION / GALLERY ============ -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Gallery</div>
+        <h2 class="section-title">The <span>Collection</span></h2>
+        <p class="section-description">
+          Every Ratel is a masterpiece forged through layers of digital effects. 
+          Bold, glitched, and completely unique — just like the creature they represent.
+        </p>
+      </div>
+      <div class="gallery-grid stagger-children" id="galleryGrid">
+        <div class="gallery-item" data-src="images/38.png">
+          <img src="images/38.png" alt="RatelEffect #38" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#38</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/176.png">
+          <img src="images/176.png" alt="RatelEffect #176" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#176</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/218.png">
+          <img src="images/218.png" alt="RatelEffect #218" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#218</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/386.png">
+          <img src="images/386.png" alt="RatelEffect #386" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#386</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/391.png">
+          <img src="images/391.png" alt="RatelEffect #391" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#391</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/442.png">
+          <img src="images/442.png" alt="RatelEffect #442" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#442</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/592.png">
+          <img src="images/592.png" alt="RatelEffect #592" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#592</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/707.png">
+          <img src="images/707.png" alt="RatelEffect #707" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#707</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/708.png">
+          <img src="images/708.png" alt="RatelEffect #708" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#708</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1214.png">
+          <img src="images/1214.png" alt="RatelEffect #1214" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1214</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1288.png">
+          <img src="images/1288.png" alt="RatelEffect #1288" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1288</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1327.png">
+          <img src="images/1327.png" alt="RatelEffect #1327" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1327</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1330.png">
+          <img src="images/1330.png" alt="RatelEffect #1330" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1330</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1362.png">
+          <img src="images/1362.png" alt="RatelEffect #1362" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1362</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/3530.png">
+          <img src="images/3530.png" alt="RatelEffect #3530" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#3530</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1407.png">
+          <img src="images/1407.png" alt="RatelEffect #1407" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1407</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1368.png">
+          <img src="images/1368.png" alt="RatelEffect #1368" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1368</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/1767.png">
+          <img src="images/1767.png" alt="RatelEffect #1767" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#1767</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/3538.png">
+          <img src="images/3538.png" alt="RatelEffect #3538" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#3538</div>
+          </div>
+        </div>
+        <div class="gallery-item" data-src="images/714.png">
+          <img src="images/714.png" alt="RatelEffect #714" loading="lazy">
+          <div class="gallery-item-info">
+            <div class="gallery-item-name">RatelEffect</div>
+            <div class="gallery-item-id">#714</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MINT PHASES ============ -->
+  <section class="mint" id="mint">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Mint</div>
+        <h2 class="section-title">Mint Your <span>Ratel</span></h2>
+        <p class="section-description">
+          Connect your wallet and claim your fearless Ratel. 
+          Four phases, one mission — become part of the pack.
+        </p>
+      </div>
+
+      <div class="mint-container reveal">
+        <div class="mint-card">
+          <!-- Status -->
+          <div class="mint-status">
+            <div class="mint-status-badge waiting" id="mint-status-badge">
+              <span class="status-dot"></span>
+              <span id="mint-status-text">Pending</span>
+            </div>
+            <span class="mint-phase-label" id="mint-phase-label">Phase 4 — Public Mint</span>
+          </div>
+
+          <!-- Mint Phases Table -->
+          <div class="mint-phases-table" id="mint-phases-table">
+            <div class="mint-phases-title">Mint Phases</div>
+            <div class="mint-phase-row header">
+              <span>Phase</span><span>Price</span><span>Limit</span><span>Platform</span>
+            </div>
+            <div class="mint-phase-row">
+              <span>Phase 1 — Team</span>
+              <span>Free</span>
+              <span>50 NFT</span>
+              <span>OpenSea</span>
+            </div>
+            <div class="mint-phase-row">
+              <span>Phase 2 — GTD</span>
+              <span>Free</span>
+              <span>1 NFT</span>
+              <span>OpenSea</span>
+            </div>
+            <div class="mint-phase-row">
+              <span>Phase 3 — FCFS</span>
+              <span>Free</span>
+              <span>1 NFT</span>
+              <span>OpenSea</span>
+            </div>
+            <div class="mint-phase-row active-phase">
+              <span>⚡ Phase 4 — Public</span>
+              <span>0.000077 ETH</span>
+              <span>—</span>
+              <span>OpenSea + Site</span>
+            </div>
+          </div>
+
+          <!-- Countdown -->
+          <div id="countdown-wrapper">
+            <div class="cd-title">Public Mint Opens In</div>
+            <div class="mint-countdown">
+              <div class="cd-box"><div class="cd-value" id="cd-days">00</div><div class="cd-label">Days</div></div>
+              <div class="cd-box"><div class="cd-value" id="cd-hours">00</div><div class="cd-label">Hours</div></div>
+              <div class="cd-box"><div class="cd-value" id="cd-minutes">00</div><div class="cd-label">Mins</div></div>
+              <div class="cd-box"><div class="cd-value" id="cd-seconds">00</div><div class="cd-label">Secs</div></div>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="mint-progress-section">
+            <div class="mint-progress-header">
+              <span>Minted</span>
+              <span id="mint-progress-text">0 / 4,999</span>
+            </div>
+            <div class="mint-progress-bar">
+              <div class="mint-progress-fill" id="mint-progress-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- Price Info -->
+          <div class="mint-price-section">
+            <div class="mint-price-box">
+              <div class="label">Price</div>
+              <div class="value"><span class="eth">0.000077</span> ETH</div>
+              <div class="mint-usd-price" id="mint-price-usd">≈ $— USD</div>
+            </div>
+          </div>
+
+          <!-- Quantity Selector + Max Mint -->
+          <div class="mint-quantity" id="qty-wrapper" style="display:none;">
+            <div class="mint-qty-left">
+              <span class="mint-qty-col-label">Quantity</span>
+              <div class="mint-qty-controls">
+                <button class="mint-qty-btn" id="qty-minus" onclick="changeQty(-1)">−</button>
+                <input type="number" class="mint-qty-input" id="mint-qty-input" value="1" min="1" oninput="setQtyFromInput(this.value)">
+                <button class="mint-qty-btn" id="qty-plus" onclick="changeQty(1)">+</button>
+              </div>
+            </div>
+            <div class="mint-qty-divider"></div>
+            <div class="mint-qty-right">
+              <span class="mint-qty-col-label">Max Per Tx</span>
+              <div class="mint-max-number" id="max-mint-display">100</div>
+              <span class="mint-max-sublabel">NFTs</span>
+            </div>
+          </div>
+
+          <!-- Wallet Button -->
+          <button class="btn-wallet" id="btn-connect-wallet" onclick="connectWallet()" style="display:none;">
+            🔗 Connect Wallet
+          </button>
+
+          <!-- Mint Button -->
+          <button class="btn-mint" id="btn-mint" onclick="mintNFT()" disabled style="display:none;">
+            ⚡ MINT NOW
+          </button>
+
+          <!-- Info -->
+          <div class="mint-info">
+            Smart contract powered by OpenSea's SeaDrop protocol.<br>
+            Gas fees are additional.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRAITS / DETAILS ============ -->
+  <section class="traits" id="traits">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Details</div>
+        <h2 class="section-title">Collection <span>Overview</span></h2>
+        <p class="section-description">
+          Every detail is crafted with purpose. Discover what makes RatelEffect a collection unlike any other.
+        </p>
+      </div>
+      <div class="traits-grid stagger-children">
+        <div class="trait-card">
+          <div class="trait-icon">🦡</div>
+          <div class="trait-name">Total Supply</div>
+          <div class="trait-value">4,999</div>
+          <div class="trait-desc">Unique Ratels, each one-of-a-kind with distinctive effect combinations</div>
+        </div>
+        <div class="trait-card">
+          <div class="trait-icon">🎭</div>
+          <div class="trait-name">Main Characters</div>
+          <div class="trait-value">Unique</div>
+          <div class="trait-desc">Multiple base Ratel characters, each with their own personality and attitude</div>
+        </div>
+        <div class="trait-card">
+          <div class="trait-icon">✨</div>
+          <div class="trait-name">Visual Effects</div>
+          <div class="trait-value">Layered</div>
+          <div class="trait-desc">Multiple effect layers applied to create stunning one-of-a-kind digital art</div>
+        </div>
+        <div class="trait-card">
+          <div class="trait-icon">🔥</div>
+          <div class="trait-name">Rarity</div>
+          <div class="trait-value">Tiered</div>
+          <div class="trait-desc">From common to legendary, every Ratel has its own rarity level</div>
+        </div>
+        <div class="trait-card">
+          <div class="trait-icon">⚔️</div>
+          <div class="trait-name">Spirit</div>
+          <div class="trait-value">Fearless</div>
+          <div class="trait-desc">Inspired by the world's most courageous animal — no fear, no retreat</div>
+        </div>
+        <div class="trait-card">
+          <div class="trait-icon">🌐</div>
+          <div class="trait-name">Community</div>
+          <div class="trait-value">Global</div>
+          <div class="trait-desc">A worldwide pack of bold holders who embody the Ratel spirit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Got <span>Questions?</span></h2>
+        <p class="section-description">
+          Everything you need to know about RatelEffect. Can't find what you're looking for? 
+          Reach out to us through our community channels.
+        </p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q1">
+            <h3>What is RatelEffect?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>RatelEffect is a collection of 4,999 unique NFTs featuring honey badger (Ratel) characters transformed through multiple layers of stunning visual effects. Each piece is a one-of-a-kind digital artwork that embodies the fearless, unstoppable spirit of the honey badger — nature's most courageous creature.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q2">
+            <h3>How many NFTs are in the collection?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>The total supply of RatelEffect is 4,999 unique NFTs. Each one features a distinct combination of base character and effect layers, making every single Ratel completely unique.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q3">
+            <h3>What makes the art unique?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Each RatelEffect NFT starts with a base Ratel character that is then layered with various digital effects — glitch distortions, chromatic shifts, neon pulses, pixel decimation, and many more. The combination of different characters and effect layers creates a truly one-of-a-kind piece of digital art.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q4">
+            <h3>What are the mint phases?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>There are 4 mint phases: Team (reserved for core team), GTD (Guaranteed — for whitelisted members), FCFS (First Come First Serve — for early supporters), and Public (open to everyone). Each phase ensures fair access to the collection based on your involvement level.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q5">
+            <h3>Why is the honey badger so significant?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>The honey badger (Ratel) is listed in the Guinness Book of World Records as the world's most fearless animal. It fights lions, eats venomous snakes, raids beehives, and is virtually indestructible. Its thick skin makes it almost immune to stings, bites, and even machete blows. RatelEffect captures this legendary resilience and fearlessness in digital form.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" id="faq-q6">
+            <h3>Where can I trade RatelEffect NFTs?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>RatelEffect NFTs can be viewed and traded on OpenSea. Visit our official OpenSea page to browse the collection and make offers on your favorite Ratels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span class="logo-ratel">Ratel</span><span class="logo-effect">Effect</span>
+      </div>
+      <p class="footer-tagline">Fearless by Nature. Unstoppable by Design.</p>
+      <a href="https://opensea.io" target="_blank" rel="noopener" class="footer-opensea">
+        <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 45C90 69.8528 69.8528 90 45 90C20.1472 90 0 69.8528 0 45C0 20.1472 20.1472 0 45 0C69.8528 0 90 20.1472 90 45Z" fill="currentColor" fill-opacity="0.1"/>
+          <path d="M22.2011 46.512L22.3953 46.2069L34.1016 27.8939C34.2726 27.6257 34.6749 27.6535 34.8043 27.9447C36.76 32.3277 38.4475 37.7786 37.6569 41.1721C37.3194 42.5849 36.3948 44.4393 35.348 46.2069C35.2035 46.4751 35.0452 46.7341 34.8769 46.9838C34.8 47.0977 34.6749 47.1625 34.5406 47.1625H22.5765C22.2657 47.1625 22.0854 46.8205 22.2011 46.512Z" fill="currentColor"/>
+          <path d="M74.38 49.9149V52.8137C74.38 52.9832 74.2784 53.1342 74.1304 53.1987C73.2242 53.5878 70.1219 55.0024 68.832 56.799C65.5402 61.3807 63.0251 67.932 57.4031 67.932H33.949C25.6362 67.932 18.9 61.1727 18.9 52.8322V52.5641C18.9 52.3394 19.0823 52.1571 19.307 52.1571H32.377C32.6378 52.1571 32.8385 52.3949 32.8108 52.6464C32.7 53.6862 32.9053 54.7446 33.4162 55.7015C34.4094 57.6153 36.427 58.8005 38.6 58.8005H44.801V52.664H38.663C38.3475 52.664 38.1626 52.2989 38.3475 52.0446C38.4214 51.9308 38.5045 51.817 38.5876 51.6847C39.3875 50.5457 40.5336 48.7728 41.6706 46.7341C42.4612 45.3028 43.2333 43.7631 43.8535 42.2141C43.982 41.8987 44.0836 41.574 44.1852 41.2585C44.3501 40.7013 44.524 40.1718 44.6441 39.6423C44.7457 39.2176 44.8288 38.7744 44.9119 38.3498C45.1583 37.0722 45.2692 35.7207 45.2692 34.3231C45.2692 33.7983 45.2415 33.2458 45.186 32.7209C45.1583 32.1499 45.0845 31.5835 45.0107 31.0125C44.9649 30.5555 44.8727 30.1031 44.7803 29.6368C44.6441 28.8739 44.4608 28.111 44.2405 27.3666L44.1667 27.0973C44.0005 26.4986 43.8535 25.9322 43.6609 25.3381C43.0684 23.4612 42.4058 21.6375 41.6706 19.9424C41.3921 19.3299 41.0858 18.7266 40.7796 18.1326C40.3365 17.2789 39.8842 16.5021 39.4596 15.7714C39.2578 15.4098 39.0745 15.0759 38.8913 14.742C38.6802 14.3543 38.4599 13.9759 38.2396 13.6143C38.0917 13.3554 37.926 13.1149 37.7874 12.8746L36.9323 11.4955C36.8215 11.3078 37.0048 11.0766 37.2158 11.1414L44.7457 13.3277H44.7642C44.7734 13.3277 44.7781 13.3323 44.7827 13.3323L45.7574 13.6328L46.8391 13.9667L47.1769 14.0684V10.6486C47.1769 8.90459 48.5738 7.5 50.3039 7.5C51.169 7.5 51.9504 7.85607 52.5151 8.43056C53.0798 9.00505 53.4312 9.79756 53.4312 10.6486V15.5773L54.2218 15.8086C54.2773 15.8271 54.3328 15.8503 54.3836 15.8874C54.5576 16.0121 54.8085 16.2016 55.1371 16.4421C55.3943 16.6371 55.6746 16.8774 56.0032 17.1316C56.6557 17.6517 57.4186 18.2781 58.2508 19.0042C58.4664 19.1843 58.6774 19.3737 58.8699 19.5631C59.9424 20.5399 61.1608 21.7159 62.3508 23.0735C62.6701 23.4427 62.9848 23.8166 63.3041 24.209C63.6236 24.606 63.9613 25.003 64.2623 25.4046C64.6648 25.9522 65.0858 26.5185 65.4606 27.1126C65.6347 27.3851 65.8273 27.6669 66.0013 27.9487C66.5012 28.7578 66.937 29.5854 67.3488 30.4131C67.5136 30.7508 67.6706 31.1147 67.8093 31.474C68.1655 32.3649 68.4479 33.274 68.6358 34.1831C68.6959 34.3993 68.7328 34.6341 68.7513 34.8504V34.9151C68.8159 35.2527 68.8436 35.6124 68.8621 35.9814C68.9452 37.1944 68.8621 38.4074 68.5983 39.6204C68.4664 40.2606 68.2923 40.8824 68.0766 41.5226C67.8609 42.1304 67.6337 42.7567 67.3626 43.3462C66.8349 44.5638 66.2239 45.7445 65.5076 46.834C65.2845 47.2033 65.0351 47.5864 64.7858 47.9557C64.5226 48.3434 64.2502 48.7173 63.9962 49.0681C63.6698 49.5051 63.325 49.9558 62.971 50.3805C62.6516 50.7544 62.3183 51.1283 61.971 51.4837C61.4895 52.0131 61.0218 52.5148 60.5403 52.989C60.2948 53.2524 60.031 53.5251 59.7625 53.7793C59.503 54.0519 59.2345 54.2921 58.9845 54.5233C58.6006 54.8887 58.2693 55.1844 57.9914 55.4201L57.3527 55.9773C57.2557 56.0603 57.131 56.1064 57.0017 56.1064H53.4312V62.2428H57.9591C59.2253 62.2428 60.4252 61.7964 61.3954 60.9638C61.7149 60.6908 63.3134 59.3193 65.1944 57.3278C65.2591 57.2587 65.3422 57.2079 65.4345 57.184L73.8688 54.6694C74.1488 54.5879 74.38 54.7585 74.38 55.0546V49.9149Z" fill="currentColor"/>
+        </svg>
+        View on OpenSea
+      </a>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 RatelEffect. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="https://rateleffect.art">rateleffect.art</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="RatelEffect NFT" id="lightboxImg">
+    </div>
+    <div class="lightbox-info">
+      <h3 id="lightboxName">RatelEffect</h3>
+      <p id="lightboxId">#0000</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
