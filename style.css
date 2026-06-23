@@ -2008,3 +2008,113 @@ body::before {
 
   .about-image-float { display: none; }
 }
+
+/* ============================================
+   OPENSEA STATS GRID
+   ============================================ */
+.opensea-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.os-stat-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 240, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.os-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  opacity: 0.5;
+}
+
+.os-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 240, 255, 0.08);
+}
+
+.os-stat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.os-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.os-stat-label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+}
+
+.os-stat-sub {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-top: 2px;
+}
+
+/* Ended status badge */
+.mint-status-badge.ended {
+  background: rgba(255, 50, 50, 0.12);
+  color: #ff4444;
+  border: 1px solid rgba(255, 50, 50, 0.3);
+}
+
+.mint-status-badge.ended .status-dot {
+  background: #ff4444;
+  animation: none;
+}
+
+/* Responsive stats */
+@media (max-width: 1024px) {
+  .opensea-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .opensea-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .os-stat-card {
+    padding: 16px 8px;
+  }
+  .os-stat-value {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .opensea-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
