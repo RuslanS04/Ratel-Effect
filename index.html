@@ -31,7 +31,7 @@
         <li><a href="#traits">Details</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li>
-          <a href="https://opensea.io" target="_blank" rel="noopener" class="nav-opensea">
+          <a href="https://opensea.io" target="_blank" rel="noopener" class="nav-opensea" data-link="opensea">
             <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M90 45C90 69.8528 69.8528 90 45 90C20.1472 90 0 69.8528 0 45C0 20.1472 20.1472 0 45 0C69.8528 0 90 20.1472 90 45Z" fill="currentColor" fill-opacity="0.1"/>
               <path d="M22.2011 46.512L22.3953 46.2069L34.1016 27.8939C34.2726 27.6257 34.6749 27.6535 34.8043 27.9447C36.76 32.3277 38.4475 37.7786 37.6569 41.1721C37.3194 42.5849 36.3948 44.4393 35.348 46.2069C35.2035 46.4751 35.0452 46.7341 34.8769 46.9838C34.8 47.0977 34.6749 47.1625 34.5406 47.1625H22.5765C22.2657 47.1625 22.0854 46.8205 22.2011 46.512Z" fill="currentColor"/>
@@ -118,6 +118,34 @@
       <div class="ticker-item"><span class="dot"></span>Pure Power</div>
     </div>
   </div>
+
+  <!-- ============ LIVE STATS (OpenSea API) ============ -->
+  <section class="live-stats" id="live-stats">
+    <div class="container">
+      <div class="live-stats-row">
+        <div class="live-stat-box reveal">
+          <div class="live-stat-icon">💎</div>
+          <div class="live-stat-value" id="stat-floor">—</div>
+          <div class="live-stat-label">Floor Price</div>
+        </div>
+        <div class="live-stat-box reveal">
+          <div class="live-stat-icon">📈</div>
+          <div class="live-stat-value" id="stat-floor-change">—</div>
+          <div class="live-stat-label">24h Change</div>
+        </div>
+        <div class="live-stat-box reveal">
+          <div class="live-stat-icon">🔥</div>
+          <div class="live-stat-value" id="stat-volume">—</div>
+          <div class="live-stat-label">Total Volume</div>
+        </div>
+        <div class="live-stat-box reveal">
+          <div class="live-stat-icon">👥</div>
+          <div class="live-stat-value" id="stat-owners">—</div>
+          <div class="live-stat-label">Unique Owners</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ ABOUT SECTION ============ -->
   <section class="about" id="about">
@@ -451,7 +479,7 @@
           <!-- Info -->
           <div class="mint-info">
             Smart contract powered by OpenSea's SeaDrop protocol.<br>
-            Gas fees are additional.
+            Gas fees are additional. Make sure you're on <strong>Base Mainnet</strong>.
           </div>
         </div>
       </div>
@@ -586,7 +614,7 @@
         <span class="logo-ratel">Ratel</span><span class="logo-effect">Effect</span>
       </div>
       <p class="footer-tagline">Fearless by Nature. Unstoppable by Design.</p>
-      <a href="https://opensea.io" target="_blank" rel="noopener" class="footer-opensea">
+      <a href="https://opensea.io" target="_blank" rel="noopener" class="footer-opensea" data-link="opensea">
         <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M90 45C90 69.8528 69.8528 90 45 90C20.1472 90 0 69.8528 0 45C0 20.1472 20.1472 0 45 0C69.8528 0 90 20.1472 90 45Z" fill="currentColor" fill-opacity="0.1"/>
           <path d="M22.2011 46.512L22.3953 46.2069L34.1016 27.8939C34.2726 27.6257 34.6749 27.6535 34.8043 27.9447C36.76 32.3277 38.4475 37.7786 37.6569 41.1721C37.3194 42.5849 36.3948 44.4393 35.348 46.2069C35.2035 46.4751 35.0452 46.7341 34.8769 46.9838C34.8 47.0977 34.6749 47.1625 34.5406 47.1625H22.5765C22.2657 47.1625 22.0854 46.8205 22.2011 46.512Z" fill="currentColor"/>
