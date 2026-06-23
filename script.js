@@ -27,7 +27,7 @@ const CONFIG = {
   CHAIN_EXPLORER:           'https://basescan.org',
 
   // ── Mint Parameters ────────────────────────────────────────
-  MINT_PRICE:               0.000573,   // ETH 0.000573
+  MINT_PRICE:               0.00072,   // ETH 0.000573
   MAX_PER_TX:               100,
 
   // ── Timer / Countdown ──────────────────────────────────────
