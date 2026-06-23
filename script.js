@@ -31,7 +31,7 @@ const CONFIG = {
   MAX_PER_TX:               100,
 
   // ── Timer / Countdown ──────────────────────────────────────
-  COUNTDOWN_TARGET:         '2026-06-23T20:00:00-00:00',
+  COUNTDOWN_TARGET:         '2026-06-23T21:00:00+04:00',
 
   // ── OpenSea API ────────────────────────────────────────────
   OPENSEA_COLLECTION_SLUG:  'ratel-effect',
