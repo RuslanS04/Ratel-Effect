@@ -34,7 +34,7 @@ const CONFIG = {
   COUNTDOWN_TARGET:         '2026-06-23T20:00:00-04:00',
 
   // ── OpenSea API ────────────────────────────────────────────
-  OPENSEA_COLLECTION_SLUG:  'rateleffect',
+  OPENSEA_COLLECTION_SLUG:  'ratel-effect',
   OPENSEA_API_KEY:          '793414f9632a492fab5836bf53ff43d1',
 
   // ── Mint Phases ────────────────────────────────────────────
