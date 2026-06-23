@@ -13,7 +13,7 @@ const CONFIG = {
   CURRENT_MINTED:           0,
 
   // ── Links ──────────────────────────────────────────────────
-  OPENSEA_URL:              'https://opensea.io/collection/rateleffect',
+  OPENSEA_URL:              'https://opensea.io/collection/ratel-effect',
   TWITTER_URL:              '',
   WEBSITE_URL:              'https://rateleffect.art',
 
