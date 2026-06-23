@@ -31,7 +31,7 @@ const CONFIG = {
   MAX_PER_TX:               100,
 
   // ── Timer / Countdown ──────────────────────────────────────
-  COUNTDOWN_TARGET:         '2026-06-23T20:00:00-04:00',
+  COUNTDOWN_TARGET:         '2026-06-23T20:00:00-00:00',
 
   // ── OpenSea API ────────────────────────────────────────────
   OPENSEA_COLLECTION_SLUG:  'ratel-effect',
@@ -39,10 +39,10 @@ const CONFIG = {
 
   // ── Mint Phases ────────────────────────────────────────────
   PHASES: [
-    { name: 'Phase 1 — Team',   price: 'Free',         limit: '50 NFT', platform: 'OpenSea' },
-    { name: 'Phase 2 — GTD',    price: 'Free',         limit: '1 NFT',  platform: 'OpenSea' },
+    { name: 'Phase 1 — Team',   price: 'Free',         limit: '100 NFT', platform: 'OpenSea' },
+    { name: 'Phase 2 — GTD',    price: 'Free',         limit: '2 NFT',  platform: 'OpenSea' },
     { name: 'Phase 3 — FCFS',   price: 'Free',         limit: '1 NFT',  platform: 'OpenSea' },
-    { name: 'Phase 4 — Public', price: '0.000077 ETH', limit: '—',      platform: 'OpenSea + Site', active: true },
+    { name: 'Phase 4 — Public', price: '0.000077 ETH', limit: '10',      platform: 'OpenSea + Site', active: true },
   ],
 };
 
